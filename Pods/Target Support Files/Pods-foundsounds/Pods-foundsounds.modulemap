@@ -1,0 +1,6 @@
+framework module Pods_foundsounds {
+  umbrella header "Pods-foundsounds-umbrella.h"
+
+  export *
+  module * { export * }
+}

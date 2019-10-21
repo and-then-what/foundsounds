@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="foundsounds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mUS-5q-xPH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n68-7j-X3N" customClass="ProgressView" customModule="foundsounds" customModuleProvider="target">
+                                <rect key="frame" x="30" y="253.66666666666663" width="315" height="315"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="n68-7j-X3N" secondAttribute="height" multiplier="1:1" id="NCC-O0-d7p"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressWidth">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="arcColor">
+                                        <color key="value" red="0.89019607840000003" green="0.25882352939999997" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBi-MN-v2T" customClass="PlaybackControlView" customModule="foundsounds" customModuleProvider="target">
+                                <rect key="frame" x="100" y="323.66666666666669" width="175" height="175"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtM-6y-xzt" customClass="FSPushButton" customModule="foundsounds" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                        <state key="normal" image="pause"/>
+                                        <connections>
+                                            <action selector="pause:" destination="Bp1-SG-LGc" eventType="touchUpInside" id="c6s-rn-tTZ"/>
+                                            <action selector="pause:" destination="CBi-MN-v2T" eventType="touchUpInside" id="tc6-tp-nOG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHz-EF-nrC" customClass="FSPushButton" customModule="foundsounds" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                        <state key="normal" image="play"/>
+                                        <connections>
+                                            <action selector="play:" destination="CBi-MN-v2T" eventType="touchUpInside" id="PGH-E1-vQ2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SHz-EF-nrC" firstAttribute="width" secondItem="CBi-MN-v2T" secondAttribute="width" id="1V8-6Q-RhL"/>
+                                    <constraint firstItem="SHz-EF-nrC" firstAttribute="height" secondItem="CBi-MN-v2T" secondAttribute="height" id="8Ua-DX-zTs"/>
+                                    <constraint firstItem="KtM-6y-xzt" firstAttribute="centerX" secondItem="CBi-MN-v2T" secondAttribute="centerX" id="92B-gO-DkV"/>
+                                    <constraint firstAttribute="width" secondItem="CBi-MN-v2T" secondAttribute="height" multiplier="1:1" id="BFB-gu-PkZ"/>
+                                    <constraint firstItem="SHz-EF-nrC" firstAttribute="centerX" secondItem="CBi-MN-v2T" secondAttribute="centerX" id="Bao-m9-qNU"/>
+                                    <constraint firstItem="KtM-6y-xzt" firstAttribute="width" secondItem="SHz-EF-nrC" secondAttribute="width" id="DzU-a3-svE"/>
+                                    <constraint firstItem="SHz-EF-nrC" firstAttribute="centerY" secondItem="CBi-MN-v2T" secondAttribute="centerY" id="Ld0-ux-SZx"/>
+                                    <constraint firstItem="KtM-6y-xzt" firstAttribute="height" secondItem="SHz-EF-nrC" secondAttribute="height" id="N6u-we-eEA"/>
+                                    <constraint firstItem="KtM-6y-xzt" firstAttribute="centerY" secondItem="CBi-MN-v2T" secondAttribute="centerY" id="gwu-NC-P6g"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="pauseButton" destination="KtM-6y-xzt" id="VmL-H3-tQ9"/>
+                                    <outlet property="playButton" destination="SHz-EF-nrC" id="3Fg-yl-jMT"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWL-ba-Z7h" customClass="FSPushButton" customModule="foundsounds" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Mvr-bj-4b9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="12" minY="3" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Invite me to LA premiere" image="radio">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="invite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j83-Hi-nNS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xd-j8-Qtc">
+                                <rect key="frame" x="140.33333333333334" y="700" width="94.666666666666657" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpx-ne-IWT" userLabel="Fast Forward" customClass="FSPushButton" customModule="foundsounds" customModuleProvider="target">
+                                <rect key="frame" x="301" y="690" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Ph9-wU-KkE"/>
+                                    <constraint firstAttribute="width" secondItem="Tpx-ne-IWT" secondAttribute="height" multiplier="1:1" id="dd0-39-69M"/>
+                                </constraints>
+                                <state key="normal" image="ff"/>
+                                <connections>
+                                    <action selector="fastForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KDv-sj-eMq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXb-dm-igs" userLabel="Replay" customClass="FSPushButton" customModule="foundsounds" customModuleProvider="target">
+                                <rect key="frame" x="30" y="690" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gXb-dm-igs" secondAttribute="height" multiplier="1:1" id="adu-nh-pl8"/>
+                                    <constraint firstAttribute="width" constant="44" id="hZn-Aq-VLT"/>
+                                </constraints>
+                                <state key="normal" image="replay"/>
+                                <connections>
+                                    <action selector="replay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4VR-dk-xbf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DX-ho-7IY" userLabel="Share" customClass="FSPushButton" customModule="foundsounds" customModuleProvider="target">
+                                <rect key="frame" x="316" y="62" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9DX-ho-7IY" secondAttribute="height" multiplier="1:1" id="Dyo-Or-mWQ"/>
+                                    <constraint firstAttribute="width" constant="44" id="kye-oe-Ra1"/>
+                                </constraints>
+                                <state key="normal" image="share"/>
+                                <connections>
+                                    <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Bi-D4-TpM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="220" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxV-69-bQi" customClass="FSPushButton" customModule="foundsounds" customModuleProvider="target">
+                                <rect key="frame" x="15" y="44" width="291" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="7Tj-vb-HDP"/>
+                                </constraints>
+                                <state key="normal" image="logo"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="St0-lf-XKZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vWL-ba-Z7h" firstAttribute="centerX" secondItem="blU-uq-m7O" secondAttribute="centerX" id="1uM-Pz-GhO"/>
+                            <constraint firstItem="GxV-69-bQi" firstAttribute="leading" secondItem="blU-uq-m7O" secondAttribute="leading" constant="15" id="8Py-hW-Jyj"/>
+                            <constraint firstItem="CBi-MN-v2T" firstAttribute="centerX" secondItem="blU-uq-m7O" secondAttribute="centerX" id="E6a-Oy-OJQ"/>
+                            <constraint firstItem="vWL-ba-Z7h" firstAttribute="width" secondItem="mUS-5q-xPH" secondAttribute="width" id="GaD-11-4Eh"/>
+                            <constraint firstItem="n68-7j-X3N" firstAttribute="centerX" secondItem="blU-uq-m7O" secondAttribute="centerX" id="HWN-Am-0yZ"/>
+                            <constraint firstItem="vWL-ba-Z7h" firstAttribute="top" secondItem="0Xd-j8-Qtc" secondAttribute="bottom" constant="10" id="JmR-Fn-nK8"/>
+                            <constraint firstItem="CBi-MN-v2T" firstAttribute="leading" secondItem="n68-7j-X3N" secondAttribute="leading" constant="70" id="KFz-6H-yvm"/>
+                            <constraint firstItem="blU-uq-m7O" firstAttribute="trailing" secondItem="Tpx-ne-IWT" secondAttribute="trailing" constant="30" id="LMK-ez-pJr"/>
+                            <constraint firstItem="gXb-dm-igs" firstAttribute="centerY" secondItem="Tpx-ne-IWT" secondAttribute="centerY" id="MeR-1y-DOi"/>
+                            <constraint firstItem="CBi-MN-v2T" firstAttribute="centerY" secondItem="blU-uq-m7O" secondAttribute="centerY" id="NIb-Wa-MGd"/>
+                            <constraint firstItem="9DX-ho-7IY" firstAttribute="top" secondItem="blU-uq-m7O" secondAttribute="top" constant="18" id="OTf-JE-b8K"/>
+                            <constraint firstItem="GxV-69-bQi" firstAttribute="top" secondItem="blU-uq-m7O" secondAttribute="top" id="UFn-zS-kJO"/>
+                            <constraint firstItem="0Xd-j8-Qtc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gXb-dm-igs" secondAttribute="trailing" id="Z2h-Ab-7ql"/>
+                            <constraint firstItem="Tpx-ne-IWT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Xd-j8-Qtc" secondAttribute="trailing" id="dVP-gg-k6D"/>
+                            <constraint firstItem="blU-uq-m7O" firstAttribute="trailing" secondItem="n68-7j-X3N" secondAttribute="trailing" constant="30" id="gBD-cp-xwm"/>
+                            <constraint firstItem="blU-uq-m7O" firstAttribute="trailing" secondItem="9DX-ho-7IY" secondAttribute="trailing" constant="15" id="hSN-zP-dmB"/>
+                            <constraint firstItem="n68-7j-X3N" firstAttribute="leading" secondItem="blU-uq-m7O" secondAttribute="leading" constant="30" id="k8V-89-FMg"/>
+                            <constraint firstItem="blU-uq-m7O" firstAttribute="bottom" secondItem="vWL-ba-Z7h" secondAttribute="bottom" id="nrv-Sm-rw4"/>
+                            <constraint firstItem="vWL-ba-Z7h" firstAttribute="top" secondItem="Tpx-ne-IWT" secondAttribute="bottom" id="ofC-DB-u1D"/>
+                            <constraint firstItem="gXb-dm-igs" firstAttribute="leading" secondItem="blU-uq-m7O" secondAttribute="leading" constant="30" id="qJv-AT-UaA"/>
+                            <constraint firstItem="9DX-ho-7IY" firstAttribute="leading" secondItem="GxV-69-bQi" secondAttribute="trailing" constant="10" id="raS-Qx-PZM"/>
+                            <constraint firstItem="0Xd-j8-Qtc" firstAttribute="centerX" secondItem="blU-uq-m7O" secondAttribute="centerX" id="siP-Gd-soR"/>
+                            <constraint firstItem="n68-7j-X3N" firstAttribute="centerY" secondItem="blU-uq-m7O" secondAttribute="centerY" id="uyD-8l-0Hj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="blU-uq-m7O"/>
+                    </view>
+                    <connections>
+                        <outlet property="controlView" destination="CBi-MN-v2T" id="lYP-ac-via"/>
+                        <outlet property="progressView" destination="n68-7j-X3N" id="5uk-IP-CBc"/>
+                        <outlet property="trackTitleLabel" destination="0Xd-j8-Qtc" id="mfe-ZW-iKI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Bp1-SG-LGc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-192.80000000000001" y="20.689655172413794"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ff" width="24" height="15"/>
+        <image name="logo" width="237" height="68"/>
+        <image name="pause" width="63.5" height="101"/>
+        <image name="play" width="90" height="101"/>
+        <image name="radio" width="18" height="18"/>
+        <image name="replay" width="18" height="22"/>
+        <image name="share" width="19" height="27"/>
+    </resources>
+</document>
